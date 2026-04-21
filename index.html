@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwis Travels Trivandrum | Premium Cab & Airport Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .kiwi-green { color: #8DB600; }
+        .bg-kiwi-green { background-color: #8DB600; }
+        .border-kiwi-green { border-color: #8DB600; }
+        .text-shadow { text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #8DB600; border-radius: 10px; }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+        .floating-whatsapp:hover { transform: scale(1.1); }
+    </style>
+</head>
+<body class="bg-white text-gray-900 overflow-x-hidden">
+
+    <!-- Header/Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-kiwi-green rounded-full flex items-center justify-center text-white font-bold text-xl">K</div>
+                    <span class="text-xl font-bold tracking-tight">KIWIS <span class="kiwi-green">TRAVELS</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-kiwi-green transition">Home</a>
+                    <a href="#services" class="hover:text-kiwi-green transition">Services</a>
+                    <a href="#features" class="hover:text-kiwi-green transition">Why Us</a>
+                    <a href="#contact" class="hover:text-kiwi-green transition">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="tel:+919020409099" class="bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-gray-800 transition hidden sm:block">
+                        Call 9020409099
+                    </a>
+                    <button id="mobile-menu-btn" class="md:hidden p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 px-4 py-6 space-y-4 shadow-lg">
+            <a href="#home" class="block text-lg font-semibold py-2 border-b border-gray-50">Home</a>
+            <a href="#services" class="block text-lg font-semibold py-2 border-b border-gray-50">Services</a>
+            <a href="#features" class="block text-lg font-semibold py-2 border-b border-gray-50">Why Us</a>
+            <a href="#contact" class="block text-lg font-semibold py-2">Contact</a>
+            <div class="pt-4 grid grid-cols-1 gap-3">
+                <a href="tel:+919020409099" class="w-full text-center bg-black text-white py-3 rounded-xl font-bold">Call Now</a>
+                <a href="https://wa.me/919020409099" class="w-full text-center bg-kiwi-green text-white py-3 rounded-xl font-bold">WhatsApp Booking</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
+            <!-- Car Image Fallback -->
+            <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=2070" 
+                 alt="Luxury Travel" class="w-full h-full object-cover"
+                 onerror="this.src='https://via.placeholder.com/1920x1080/111111/FFFFFF?text=Premium+Travel+Trivandrum'">
+        </div>
+        
+        <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-white">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-shadow">
+                    Premium Travel & <br><span class="kiwi-green">Airport Transfers</span> in Trivandrum
+                </h1>
+                <p class="text-lg md:text-xl mb-10 text-gray-200 leading-relaxed font-light">
+                    Experience unmatched comfort with Kiwis Travels. Reliable, professional, and on-time cab services for local and outstation trips.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/919020409099" class="flex items-center justify-center gap-2 bg-kiwi-green hover:bg-[#7aa000] text-white px-8 py-4 rounded-xl font-bold text-lg transition shadow-xl">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Book Now on WhatsApp
+                    </a>
+                    <a href="tel:+919020409099" class="flex items-center justify-center gap-2 border-2 border-white/30 hover:border-white text-white px-8 py-4 rounded-xl font-bold text-lg transition bg-white/10 backdrop-blur-sm">
+                        Call for Instant Booking
+                    </a>
+                </div>
+                
+                <!-- Highlight Feature Card -->
+                <div class="mt-16 bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/20 inline-flex items-center gap-6 max-w-sm">
+                    <div class="p-2 bg-kiwi-green rounded-lg shrink-0">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-kiwi-green font-bold">New Addition</p>
+                        <h3 class="text-lg font-bold">Toyota Innova Hycross</h3>
+                        <p class="text-sm text-gray-300">Premium comfort for family trips.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-sm font-bold uppercase tracking-widest kiwi-green mb-3">Our Expertise</h2>
+                <h3 class="text-3xl md:text-5xl font-bold text-gray-900">Premium Travel Services</h3>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Tailored transportation solutions designed for reliability and elite comfort.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-kiwi-green transition-colors">
+                        <svg class="w-8 h-8 kiwi-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Airport Transfers</h4>
+                    <p class="text-gray-600 mb-6">Punctual pickups and drops for Trivandrum International Airport. We track your flight.</p>
+                    <a href="tel:+919020409099" class="text-sm font-bold kiwi-green flex items-center gap-2 hover:gap-3 transition-all">Book Now &rarr;</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-kiwi-green transition-colors">
+                        <svg class="w-8 h-8 kiwi-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Local City Rides</h4>
+                    <p class="text-gray-600 mb-6">Reliable point-to-point transportation within Trivandrum for business or leisure.</p>
+                    <a href="tel:+919020409099" class="text-sm font-bold kiwi-green flex items-center gap-2 hover:gap-3 transition-all">Book Now &rarr;</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-kiwi-green transition-colors">
+                        <svg class="w-8 h-8 kiwi-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Outstation Trips</h4>
+                    <p class="text-gray-600 mb-6">Comfortable long-distance travel across Kerala and neighboring states with expert drivers.</p>
+                    <a href="tel:+919020409099" class="text-sm font-bold kiwi-green flex items-center gap-2 hover:gap-3 transition-all">Book Now &rarr;</a>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-gray-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-kiwi-green transition-colors">
+                        <svg class="w-8 h-8 kiwi-green group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Premium Service</h4>
+                    <p class="text-gray-600 mb-6">Choose from our luxury fleet including Innova Hycross for a first-class experience.</p>
+                    <a href="tel:+919020409099" class="text-sm font-bold kiwi-green flex items-center gap-2 hover:gap-3 transition-all">Book Now &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=1000" 
+                             alt="Professional Driver" class="rounded-3xl shadow-2xl relative z-10"
+                             onerror="this.src='https://via.placeholder.com/800x600/111111/FFFFFF?text=Professional+Service'">
+                        <div class="absolute -bottom-6 -right-6 bg-kiwi-green text-white p-8 rounded-3xl z-20 shadow-xl hidden md:block">
+                            <p class="text-4xl font-bold mb-1">24/7</p>
+                            <p class="text-sm font-semibold uppercase tracking-wider opacity-90">Support Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-sm font-bold uppercase tracking-widest kiwi-green mb-3">Why Choose Kiwis</h2>
+                    <h3 class="text-3xl md:text-5xl font-bold mb-8">Committed to Your Comfort and Safety</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-6">
+                            <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-50 text-kiwi-green font-bold">1</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">On-time Pickups</h4>
+                                <p class="text-gray-600">Time is money. Our drivers arrive at least 10 minutes before the scheduled time.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-50 text-kiwi-green font-bold">2</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Professional Drivers</h4>
+                                <p class="text-gray-600">Experienced, polite, and well-trained chauffeurs who prioritize your safety.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-50 text-kiwi-green font-bold">3</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Clean & Sanitized Cars</h4>
+                                <p class="text-gray-600">Our vehicles undergo rigorous cleaning after every trip to maintain hygiene standards.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-green-50 text-kiwi-green font-bold">4</div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2">Transparent Pricing</h4>
+                                <p class="text-gray-600">No hidden costs. Premium service at competitive and affordable rates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact/Call to Action -->
+    <section id="contact" class="py-24 bg-black text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-kiwi-green/10 -skew-x-12 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Book Your Ride?</h2>
+                <p class="text-xl text-gray-400">Available 24/7 for all your travel needs in Trivandrum.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/5 backdrop-blur-md p-10 rounded-3xl border border-white/10 text-center">
+                    <p class="text-gray-400 uppercase text-xs font-bold tracking-widest mb-4">Phone Booking</p>
+                    <a href="tel:+919020409099" class="text-3xl font-bold block mb-4 hover:text-kiwi-green transition">90204 09099</a>
+                    <a href="tel:+918606025149" class="text-2xl font-semibold text-gray-300 block mb-8 hover:text-kiwi-green transition">86060 25149</a>
+                    <a href="tel:+919020409099" class="inline-block w-full bg-white text-black font-bold py-4 rounded-xl hover:bg-kiwi-green hover:text-white transition shadow-lg">Call Now</a>
+                </div>
+
+                <div class="bg-kiwi-green p-10 rounded-3xl text-center shadow-2xl scale-105">
+                    <p class="text-white/80 uppercase text-xs font-bold tracking-widest mb-4">Fastest Response</p>
+                    <h3 class="text-3xl font-bold mb-8">WhatsApp Booking</h3>
+                    <a href="https://wa.me/919020409099" class="inline-block w-full bg-black text-white font-bold py-4 rounded-xl hover:bg-gray-800 transition shadow-xl">Message on WhatsApp</a>
+                    <p class="mt-4 text-sm font-medium opacity-80">No login required. Direct chat.</p>
+                </div>
+
+                <div class="bg-white/5 backdrop-blur-md p-10 rounded-3xl border border-white/10 flex flex-col justify-center text-center">
+                    <div class="mb-4">
+                        <svg class="w-12 h-12 mx-auto kiwi-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Available 24/7</h3>
+                    <p class="text-gray-400">Trivandrum, Kerala, India</p>
+                    <div class="mt-6 pt-6 border-t border-white/10">
+                        <p class="text-xs uppercase tracking-widest kiwi-green font-bold mb-2">Service Area</p>
+                        <p class="text-sm font-medium">Trivandrum & All Major Outstations</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 justify-center md:justify-start">
+                        <div class="w-8 h-8 bg-kiwi-green rounded-full flex items-center justify-center text-white font-bold text-lg">K</div>
+                        <span class="text-xl font-bold tracking-tight">KIWIS <span class="kiwi-green">TRAVELS</span></span>
+                    </div>
+                    <p class="text-gray-500 text-sm text-center md:text-left">Premium Cab Service based in Trivandrum, Kerala.</p>
+                </div>
+                
+                <div class="flex gap-8 text-sm font-semibold">
+                    <a href="#home" class="hover:text-kiwi-green">Home</a>
+                    <a href="#services" class="hover:text-kiwi-green">Services</a>
+                    <a href="#contact" class="hover:text-kiwi-green">Contact</a>
+                </div>
+
+                <div class="text-center md:text-right">
+                    <p class="text-sm font-bold text-gray-900">Contact Support</p>
+                    <p class="text-gray-500 text-sm">9020409099 | 8606025149</p>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-100 text-center">
+                <p class="text-gray-400 text-xs">&copy; 2024 Kiwis Travels Trivandrum. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/919020409099" target="_blank" class="floating-whatsapp flex items-center justify-center w-14 h-14 bg-kiwi-green rounded-full shadow-2xl text-white">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when a link is clicked
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll reveal animation (simple version)
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    section.classList.add('opacity-100');
+                    section.classList.remove('opacity-0');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
